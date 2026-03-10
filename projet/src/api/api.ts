@@ -1,23 +1,23 @@
 import type { Stock } from "../ui/interface.js"
 import type { Price } from "../ui/interface.js"
 
-async function fetchFilms(){
+async function fetchStock(){
   const response = await fetch("./api/bourse.json")
 
-  const films: Stock[] = await response.json()
+  const stocks: Stock[] = await response.json()
 
   // return liste des films
-  return films
+  return stocks
 }
 
 //récupérer les films et les afficher dans la page HTML
-async function displayFilms() {
+async function displayStocks() {
 
   //fonction qui récupère les films depuis l’API
-  const films = await fetchFilms()
-  console.log(films)
+  const stocks = await fetchStock()
+  console.log(stocks)
 
   }
 
 // Appel de la fonction
-displayFilms()
+displayStocks()
