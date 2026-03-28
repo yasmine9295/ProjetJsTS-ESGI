@@ -1,6 +1,6 @@
 import type { Stock } from "../models/stock.ts"
 
-async function fetchStock(): Promise<Stock[]> {
+export async function fetchStock(): Promise<Stock[]> {
   try {
 
     const response = await fetch("/stocks.json")

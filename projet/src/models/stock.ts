@@ -10,5 +10,5 @@ export interface Stock {
   sector: string
   currentPrice: number
   currency: string
-  Prices: Price[]
+  history: Price[]
 }

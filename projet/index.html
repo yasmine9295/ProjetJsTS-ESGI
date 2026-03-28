@@ -6,7 +6,21 @@
     <title>MyBourse</title>
     <script src="./src/main.ts" type="module"></script>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1rem;">
+
+    <h1>MyBourse</h1>
+
+    <select id="name1"></select>
+    <select id="name2"></select>
+
+    <select id="typeChart">
+    <option value="line">Ligne</option>
+    <option value="bar">Barres</option>
+    </select>
+
+    <!-- <button id="afficher">Afficher</button> -->
+
+    <canvas id="lineCanvas" aria-label="chart" role="img" width="auto" height="100%"></canvas>
     
 </body>
 </html>
