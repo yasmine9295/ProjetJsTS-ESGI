@@ -1,0 +1,18 @@
+{
+  "name": "mybourse",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.2"
+  }
+}

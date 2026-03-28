@@ -1,23 +1,33 @@
-import type { Stock } from "../ui/interface.js"
-import type { Price } from "../ui/interface.js"
+import type { Stock } from "../models/stock.ts"
 
-async function fetchStock(){
-  const response = await fetch("./api/bourse.json")
+async function fetchStock(): Promise<Stock[]> {
+  try {
 
-  const stocks: Stock[] = await response.json()
+    const response = await fetch("/stocks.json")
+    if (!response.ok) {
+      throw new Error("Erreur lors du chargement des données")
+    }
 
-  // return liste des films
-  return stocks
+    const stocks: Stock[] = await response.json()
+
+    return stocks
+
+  } catch (error) {
+  
+    console.error("Erreur fetchStock :", error)
+    return []
+  }
 }
 
-//récupérer les films et les afficher dans la page HTML
-async function displayStocks() {
+async function displayStocks(): Promise<void> {
+  try {
 
-  //fonction qui récupère les films depuis l’API
-  const stocks = await fetchStock()
-  console.log(stocks)
+    const stocks = await fetchStock()
+    console.log(stocks)
 
+  } catch (error) {
+    console.error("Impossible d'afficher les actions :", error)
   }
+}
 
-// Appel de la fonction
 displayStocks()
