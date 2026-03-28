@@ -1,4 +1,4 @@
-import type { Stock } from "../models/stock.ts"
+import type { Stock } from "../models/stock.js"
 
 export async function fetchStock(): Promise<Stock[]> {
   try {

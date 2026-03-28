@@ -1,7 +1,7 @@
 MyBourse
 
 Lancement du projet :
-1. Accère au dossier 
+1. Accèder au dossier 
 
 cd projet
 

@@ -8,7 +8,7 @@
 </head>
 <body style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1rem;">
 
-    <h1>MyBourse</h1>
+    <h1>MyBourse - (Charts sa ma donner mal a la tete)</h1>
 
     <select id="name1"></select>
     <select id="name2"></select>
@@ -19,6 +19,15 @@
     </select>
 
     <!-- <button id="afficher">Afficher</button> -->
+
+     <label for="periode">Période :</label>
+    <select id="periode">
+        <option value="all">Toutes</option>
+        <option value="1jour">24h</option>
+        <option value="semaine">1 semaine</option>
+        <option value="mois">1 mois</option>
+        <option value="an">1 an</option>
+    </select>
 
     <canvas id="lineCanvas" aria-label="chart" role="img" width="auto" height="100%"></canvas>
     
