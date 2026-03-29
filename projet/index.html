@@ -8,19 +8,21 @@
 </head>
 <body style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1rem;">
 
-    <h1>MyBourse - (Charts sa ma donner mal a la tete)</h1>
+    <h1>MyBourse - (Charts ca m'a donné mal à la tete)</h1>
+    <button id="btnsombre" style="position: fixed; right: 1rem;">Mode sombre</button>
+    <button id="exportBtn"style="position: fixed; right: 8rem;">Exporter CSV</button>
 
     <select id="name1"></select>
     <select id="name2"></select>
 
     <select id="typeChart">
-    <option value="line">Ligne</option>
-    <option value="bar">Barres</option>
+        <option value="line">Ligne</option>
+        <option value="bar">Barres</option>
     </select>
 
     <!-- <button id="afficher">Afficher</button> -->
 
-     <label for="periode">Période :</label>
+    <label for="periode">Période :</label>
     <select id="periode">
         <option value="all">Toutes</option>
         <option value="1jour">24h</option>
@@ -29,7 +31,26 @@
         <option value="an">1 an</option>
     </select>
 
-    <canvas id="lineCanvas" aria-label="chart" role="img" width="auto" height="100%"></canvas>
+    <div id="errorMessage" style="color: red"></div>
+    <canvas id="lineCanvas" aria-label="chart"></canvas>
+
     
 </body>
 </html>
+
+
+
+<style>
+  body.dark {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  body.dark select {
+    background-color: #333;
+    color: white;
+  }
+  body.dark #errorMessage {
+    color: #ff6b6b;
+  }
+
+</style>
